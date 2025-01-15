@@ -1,0 +1,107 @@
+/* The body element: centers the content and applies a dark theme */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a2e;
+  margin: 0;
+}
+
+/* The calculator container: provides a styled box with a modern design */
+.calculator {
+  background: #222831;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 320px;
+}
+
+/* The display area: shows the input and results with a clean and readable style */
+#display {
+  width: 95%;
+  height: 60px;
+  font-size: 1.8rem;
+  text-align: right;
+  margin-bottom: 20px;
+  border: 1px solid #393e46;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #393e46;
+  color: #eeeeee;
+}
+
+/* The button container: organizes buttons into a grid layout */
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* General button styling: applies consistent design for all buttons */
+.btn {
+  padding: 18px;
+  font-size: 1.3rem;
+  background-color: #00adb5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Button hover state: adds interactivity with a scale effect and color change */
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #028a93;
+}
+
+/* Operator buttons: styled with a distinct orange color */
+.btn.operator {
+  background-color: #ff5722;
+}
+
+/* Operator button hover state: a darker orange shade for emphasis */
+.btn.operator:hover {
+  background-color: #e64a19;
+}
+
+/* Clear button: styled with a red color to signify its function */
+.btn.clear {
+  background-color: #d32f2f;
+}
+
+/* Clear button hover state: a darker red shade for emphasis */
+.btn.clear:hover {
+  background-color: #c62828;
+}
+
+/* Special button with data attribute "D": styled with a unique purple color */
+.btn[data-value="D"] {
+  background-color: #7c4dff;
+}
+
+/* Hover state for the special button: darker purple for emphasis */
+.btn[data-value="D"]:hover {
+  background-color: #651fff;
+}
+
+/* Button active state: reduces scale slightly to simulate a press */
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive design: adjusts calculator width and button sizes for smaller screens */
+@media (max-width: 768px) {
+  .calculator {
+    width: 90%;
+  }
+  #display {
+    font-size: 1.5rem;
+  }
+  .btn {
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+}
